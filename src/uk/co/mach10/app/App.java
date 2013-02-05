@@ -4,10 +4,6 @@ import uk.co.mach10.app.task.LifecycleWebServer;
 
 import java.io.IOException;
 
-/**
- * Copyright: Rob Shield 2012
- * rotovol - volunteer administration system
- */
 public class App {
 
     public static void main(String[] args) {

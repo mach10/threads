@@ -10,16 +10,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.RejectedExecutionException;
 
-/**
- * Copyright: Rob Shield 2012
- * rotovol - volunteer administration system
- */
 public class LifecycleWebServer {
-    private final ExecutorService exec = Executors.newFixedThreadPool(10);
+    public static final int PORT_NUMBER = 9000;
+	private final ExecutorService exec = Executors.newFixedThreadPool(10);
     private final int bufferLength = 256;
 
     public void start() throws IOException {
-        ServerSocket socket = new ServerSocket(9000);
+        ServerSocket socket = new ServerSocket(PORT_NUMBER);
 
         while (!exec.isShutdown()) {
             try {
