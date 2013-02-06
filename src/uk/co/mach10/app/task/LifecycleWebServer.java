@@ -44,6 +44,7 @@ public class LifecycleWebServer {
     }
 
     private void handleRequest(Socket conn) throws IOException {
+    	System.out.println("Handled by "+Thread.currentThread().getName());
         InputStream inputStream = conn.getInputStream();
         OutputStream requestOutputStream = conn.getOutputStream();
         writeResponse(inputStream, requestOutputStream);
