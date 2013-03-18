@@ -1,6 +1,5 @@
 package uk.co.mach10.app.task;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -10,6 +9,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.RejectedExecutionException;
 
+/**
+ * run this up via a main method, then use your browser to go to 
+ * localhost:9000/some/path/with?maybe=someVars&some=moreVars
+ * or something and look at the console to see which threads are handling the request.
+ * Do it enough times and you'll see the ThreadPool reusing the threads.
+ * @author robert
+ *
+ */
 public class LifecycleWebServer {
     public static final int PORT_NUMBER = 9000;
 	private final ExecutorService exec = Executors.newFixedThreadPool(10);

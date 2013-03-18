@@ -11,6 +11,7 @@ public class LatchHarness {
 			Thread t = new Thread(){
 				public void run(){
 					try{
+						System.out.println(Thread.currentThread().getName()+" awaiting starting gate");
 						startingGate.await();
 						try{
 							task.run();

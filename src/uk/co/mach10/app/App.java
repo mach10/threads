@@ -11,7 +11,8 @@ public class App {
 
     public static void main(String[] args) {
     	
-        App.latchHarnessTest();
+        App.webServerTest();
+        
     }
     
     private static void latchHarnessTest(){
@@ -34,14 +35,15 @@ public class App {
             e.printStackTrace();  //@todo handle this
         }
         
-        LifeCycleWebClient client = new LifeCycleWebClient();
-        client.connect();
+        //LifeCycleWebClient client = new LifeCycleWebClient();
+        //client.connect();
         try {
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
+			System.out.println("stopping the web server");
 			webServer.stop();
 		}
     }
