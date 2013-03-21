@@ -1,4 +1,4 @@
 threads
 =======
 
-small test project for thread based work and examples in Java
+small test project for thread based work and examples in Javatest
